@@ -9,7 +9,7 @@ const AllRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<MainHomePage />}></Route>
-      <Route path="/adminPage" element={MainAdminPage}></Route>
+      <Route path="/adminPage" element={<MainAdminPage />}></Route>
     </Routes>
   )
 }
