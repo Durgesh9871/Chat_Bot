@@ -58,12 +58,29 @@ performance in unpredictable conditions.</Text>
 
             {/*  Sale Box started from here ------------------- */} 
 
-            <Box border="2px solid red" height="auto"  textAlign="center" m="50px auto 0px auto" >
-              <Img src='https://github.com/Durgesh9871/ReadmeImages/blob/main/Fashion_Gallery/Sale_fashion_Galeery.png?raw=true' m="20px auto 0px auto"></Img>
-            
+            <Box  border="2px   red" height="auto"  textAlign="center" mt="100px" >
+              <Img src='https://github.com/Durgesh9871/ReadmeImages/blob/main/Fashion_Gallery/Sale_fashion_Galeery.png?raw=true' m="auto"></Img>
               <Button id="mensButtonHover" color="white" mt="14px" border="1px solid #333333"  backgroundColor="#333333" borderRadius="1px" p="0px 27px" >SHOP MEN</Button>
-
             </Box>
+             
+
+             {/* After sale box images----------- */}
+
+             <Box border="2px  red" height="auto" display="flex" justifyContent="space-evenly" flexDirection={{base:"column", sm: "row", md: "row", lg: "row",xl: "row",'2xl': "row"}} p="0px"   >
+
+{
+  ImageBox.length > 0 && ImageBox.map((item,id)=>{
+    return (
+      <Box id="mainImageBoxThree" border="2px  red"  textAlign="center" key={id}>
+        <Img src={item.image} width="100%"></Img>
+        <Text fontWeight="600" color="#343333" fontSize="15px" mt="4px">{item.text}</Text>
+      </Box>
+    )
+  })
+}
+
+</Box>
+
 
          </Box>
      
