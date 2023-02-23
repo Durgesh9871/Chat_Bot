@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
+import Sidebar from '../Admin_Components/SliderAdmin'
 
 const MainAdminPage = () => {
   return (
@@ -13,9 +14,7 @@ const MainAdminPage = () => {
   {/*  Main Admin Page Started from here ---------- */}
    <Box>
 
-   hello world 
-
-
+<Sidebar />
 
    </Box>
 
