@@ -545,8 +545,8 @@ performance in unpredictable conditions.</Text>
         <div className='image' key={i}>
        <Image className='img' src={item.mainImage} alt={item.categories} boxSize={{base:"350px", sm: "350px", md: "350px", lg: "350px",xl: "350px",'2xl': "350px"}}  shadow="2xl" cursor="pointer" />
       
-       <Heading fontSize="15.5px" fontWeight="600" color="#303030" textAlign="left">{model}</Heading>
-       
+       <Heading fontSize="15.5px" fontWeight="600" color="#303030" textAlign="left">{item.title}</Heading>
+
        <Box style={{display:'flex' , alignItems:"center"}}>
           <Heading fontSize='18px' fontWeight="600" color="#303030" mt={1.5}  textAlign="left">${item.price}</Heading>
           <Text as='del' fontSize='18px' className='control' mt={1.5} ml={3} fontWeight="600" color="#727272" textAlign="left">${item.realPrice}</Text>
