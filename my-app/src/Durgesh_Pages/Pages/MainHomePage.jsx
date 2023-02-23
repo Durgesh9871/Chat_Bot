@@ -371,7 +371,14 @@ performance in unpredictable conditions.</Text>
      <Carousel responsive={responsive} > 
     
      {getData.length > 0 && getData.map((item , i)=>{
+       
+       const total = Math.floor(+(item.realPrice) * 100 )
+       const spend = Math.floor(+(item.price) * 100 )
+       const amount =  Math.floor((spend/total)*100)
+       const ans = 100 - amount 
+
        return (
+        
         <div className='image' key={i}>
        <Image className='img' src={item.mainImage} alt={item.categories} boxSize={{base:"350px", sm: "350px", md: "350px", lg: "350px",xl: "350px",'2xl': "350px"}}  shadow="2xl" cursor="pointer" />
       
@@ -381,7 +388,7 @@ performance in unpredictable conditions.</Text>
        <Box style={{display:'flex' , alignItems:"center"}}>
           <Heading fontSize='18px' fontWeight="600" color="#303030" mt={1.5}  textAlign="left">${item.price}</Heading>
           <Text as='del' fontSize='18px' className='control' mt={1.5} ml={3} fontWeight="600" color="#727272" textAlign="left">${item.realPrice}</Text>
-          <Text  fontSize='14px' className='control' mt={1.5} ml={2} fontWeight="600" color="#e1a26f" textAlign="left">(22% off)</Text>
+          <Text  fontSize='14px' className='control' mt={1.5} ml={2} fontWeight="600" color="#e1a26f" textAlign="left">({ans}% off)</Text>
         </Box>
        </div>
           )
