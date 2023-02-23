@@ -48,7 +48,7 @@ performance in unpredictable conditions.</Text>
                   return (
                     <Box id="mainImageBoxThree" border="2px  red"  textAlign="center" >
                       <Img src={item.image} width="100%"></Img>
-                      <Text fontWeight="600" color="#343333" fontSize="18px" mt="4px">{item.text}</Text>
+                      <Text fontWeight="600" color="#343333" fontSize="15px" mt="4px">{item.text}</Text>
                     </Box>
                   )
                 })

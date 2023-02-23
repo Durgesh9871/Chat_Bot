@@ -25,6 +25,12 @@
     #mainImageNav{
        height: 70vw;
     }
+    #mainImageBoxThree{
+        width: 90%;
+        margin: 10px auto 20px auto;
+
+        
+    }
 }
 
 @media (min-width:451px) and (max-width:750px) {
