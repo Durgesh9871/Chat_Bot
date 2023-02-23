@@ -98,10 +98,16 @@ performance in unpredictable conditions.</Text>
   })
 }
 
-
-
-
 </Box>
+
+
+{/*  React carousel starts from here ----------------------------------- */}
+
+
+      <Box>
+        
+      </Box>
+
 
 
          </Box>
