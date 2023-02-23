@@ -41,14 +41,14 @@ performance in unpredictable conditions.</Text>
             </Box>
 
             {/*After heading Main Images -------------------- */}
-            <Box border="2px  red" height="auto" display="flex" justifyContent="space-evenly" p="0px"  >
+            <Box border="2px solid red" height="auto" display="flex" justifyContent="space-evenly" flexDirection={{base:"column", sm: "row", md: "row", lg: "row",xl: "row",'2xl': "row"}} p="0px"   >
 
               {
                 ImageBox.length > 0 && ImageBox.map((item)=>{
                   return (
-                    <Box border="2px  red" width="30%" textAlign="center">
+                    <Box id="mainImageBoxThree" border="2px  red"  textAlign="center" >
                       <Img src={item.image} width="100%"></Img>
-                      <Text fontWeight="600" color="#343333" fontSize="19px" mt="4px">{item.text}</Text>
+                      <Text fontWeight="600" color="#343333" fontSize="18px" mt="4px">{item.text}</Text>
                     </Box>
                   )
                 })
