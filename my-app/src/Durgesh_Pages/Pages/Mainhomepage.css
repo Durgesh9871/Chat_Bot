@@ -38,3 +38,13 @@
        height: 57vw;
     }
 }
+
+
+/*  Particular men button Hover */
+
+#mensButtonHover:hover{
+    color: black;
+    background-color: whitesmoke;
+    border: 2px solid black;
+
+}
