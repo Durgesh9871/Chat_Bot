@@ -22,9 +22,9 @@ const Sidebar = () => {
           <NavIcon to="#">
              <Text>Dashboard</Text>
           </NavIcon>
-          <SidebarLink to="/">Home</SidebarLink>
-          <SidebarLink to="/about">About</SidebarLink>
-          <SidebarLink to="/services">Services</SidebarLink>
+          <SidebarLink> Home </SidebarLink>
+          <SidebarLink>About</SidebarLink>
+          <SidebarLink >Services</SidebarLink>
           
          
 
@@ -65,10 +65,9 @@ const SidebarWrap = styled.div`
   width: 100%;
 `;
 
-const SidebarLink = styled(Link)`
+const SidebarLink = styled.div`
   display: flex;
   color: #fff;
-  justify-content: space-between;
   align-items: center;
   padding: 20px;
   list-style: none;
