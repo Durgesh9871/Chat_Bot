@@ -18,6 +18,23 @@ const MainHomePage = () => {
   }
   ]
 
+  const ImageDetails = [
+    {
+      image:"https://eddiebauer.scene7.com/is/image/EBContent/230131_hp_mrk3box_flyline_V1?$jpg12$&scl=1" ,
+      text:"BC Flyline Adaptive Ski Kit" ,
+      para:"Designing technical gear and apparel for all adventure seekers is a pledge we take seriously, and that’s why we worked with Eddie Bauer guide & professional sit-ski athlete Trevor Kennison to build a one-of-a-kind kit that would make the slopes more accessible for adaptive skiers. We’re proud to announce that this amazing gear won Product of the year at the 4th annual Outdoor Retailer Innovation Awards."
+    },
+    {image:"https://eddiebauer.scene7.com/is/image/EBContent/230131_hp_mrk3box_high-fives_V1?$jpg12$&scl=1" ,
+    text:"High Fives Foundation",
+    para:"Designing technical gear and apparel for all adventure seekers is a pledge we take seriously, and that’s why we worked with Eddie Bauer guide & professional sit-ski athlete Trevor Kennison to build a one-of-a-kind kit that would make the slopes more accessible for adaptive skiers. We’re proud to announce that this amazing gear won Product of the year at the 4th annual Outdoor Retailer Innovation Awards."
+  },
+    {image:"https://eddiebauer.scene7.com/is/image/EBContent/221227_hp_mrkt3box_TT_V1?$jpg12$&scl=1" ,
+    text:"Abundance Abounds!",
+    para:"Designing technical gear and apparel for all adventure seekers is a pledge we take seriously, and that’s why we worked with Eddie Bauer guide & professional sit-ski athlete Trevor Kennison to build a one-of-a-kind kit that would make the slopes more accessible for adaptive skiers. We’re proud to announce that this amazing gear won Product of the year at the 4th annual Outdoor Retailer Innovation Awards."
+
+  }
+  ]
+
   return (
     <Box>
       {/* NavBar  ------- */}
@@ -69,7 +86,7 @@ performance in unpredictable conditions.</Text>
              <Box border="2px  red" height="auto" display="flex" justifyContent="space-evenly" flexDirection={{base:"column", sm: "row", md: "row", lg: "row",xl: "row",'2xl': "row"}} p="0px"   >
 
 {
-  ImageBox.length > 0 && ImageBox.map((item,id)=>{
+  ImageDetails.length > 0 && ImageDetails.map((item,id)=>{
     return (
       <Box id="mainImageBoxThree" border="2px  red"  textAlign="center" key={id}>
         <Img src={item.image} width="100%"></Img>
