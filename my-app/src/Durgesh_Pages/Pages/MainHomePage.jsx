@@ -83,7 +83,7 @@ performance in unpredictable conditions.</Text>
 
              {/* After sale box images----------- */}
 
-             <Box border="2px  red" height="auto" display="flex" justifyContent="space-evenly" flexDirection={{base:"column", sm: "row", md: "row", lg: "row",xl: "row",'2xl': "row"}} p="0px"   >
+             <Box border="2px  red" height="auto" display="flex" justifyContent="space-evenly" flexDirection={{base:"column", sm: "row", md: "row", lg: "row",xl: "row",'2xl': "row"}} p="0px"  mb="40px" >
 
 {
   ImageDetails.length > 0 && ImageDetails.map((item,id)=>{
@@ -105,6 +105,7 @@ performance in unpredictable conditions.</Text>
 
 
       <Box>
+        <Text textAlign="center" fontWeight="600" fontSize="25px" >Fashion Gallery</Text> 
         
       </Box>
 
