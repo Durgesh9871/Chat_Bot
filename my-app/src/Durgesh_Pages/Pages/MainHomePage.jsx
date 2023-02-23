@@ -44,9 +44,9 @@ performance in unpredictable conditions.</Text>
             <Box border="2px solid red" height="auto" display="flex" justifyContent="space-evenly" flexDirection={{base:"column", sm: "row", md: "row", lg: "row",xl: "row",'2xl': "row"}} p="0px"   >
 
               {
-                ImageBox.length > 0 && ImageBox.map((item)=>{
+                ImageBox.length > 0 && ImageBox.map((item,id)=>{
                   return (
-                    <Box id="mainImageBoxThree" border="2px  red"  textAlign="center" >
+                    <Box id="mainImageBoxThree" border="2px  red"  textAlign="center" key={id}>
                       <Img src={item.image} width="100%"></Img>
                       <Text fontWeight="600" color="#343333" fontSize="15px" mt="4px">{item.text}</Text>
                     </Box>
