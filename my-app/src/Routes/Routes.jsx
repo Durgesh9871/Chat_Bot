@@ -1,8 +1,8 @@
 
 import React from 'react'
 import {Routes , Route} from "react-router-dom"
-import { MainAdminPage } from '../Durgesh_Pages/MainAdminPage'
-import { MainHomePage } from '../Durgesh_Pages/MainHomePage'
+import { MainAdminPage } from '../Durgesh_Pages/Pages/MainAdminPage'
+import { MainHomePage } from '../Durgesh_Pages/Pages/MainHomePage'
 
 
 const AllRoutes = () => {
