@@ -3,10 +3,16 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Text } from "@chakra-ui/react";
+import "./styles.css"
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  function toggleDropdown() {
+    setShowDropdown(!showDropdown);
+  }
 
   return (
     <>
@@ -19,17 +25,9 @@ const Sidebar = () => {
           <SidebarLink to="/">Home</SidebarLink>
           <SidebarLink to="/about">About</SidebarLink>
           <SidebarLink to="/services">Services</SidebarLink>
-          <Dropdown>
-            <DropdownBtn>
-              Dropdown 
-            </DropdownBtn>
-            <DropdownContent>
-              <SidebarLink >Dropdown Item 1</SidebarLink>
-              <SidebarLink >Dropdown Item 2</SidebarLink>
-              <SidebarLink >Dropdown Item 3</SidebarLink>
-            </DropdownContent>
-          </Dropdown>
-          {/* <LoginLogoutBtn onClick={handleLogout}>Logout</LoginLogoutBtn> */}
+          
+         
+
         </SidebarWrap>
       </SidebarNav>
     </>
@@ -67,7 +65,7 @@ const SidebarWrap = styled.div`
   width: 100%;
 `;
 
-const SidebarLink = styled.div`
+const SidebarLink = styled(Link)`
   display: flex;
   color: #fff;
   justify-content: space-between;
@@ -78,37 +76,11 @@ const SidebarLink = styled.div`
   text-decoration: none;
   font-size: 18px;
   &:hover {
-    background-color: #04aa6d;
-    border-left: 4px solid #fff;
+    background-color: #20A7DB;
+   
     cursor: pointer;
   }
 `;
 
-const Dropdown = styled.div`
-  display: block;
-  position: relative;
-  color: #fff;
-`;
-
-const DropdownBtn = styled.div`
-  display: flex;
-  color: #fff;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  list-style: none;
-  height: 60px;
-  text-decoration: none;
-  font-size: 18px;
-  &:hover {
-    background-color: #04aa6d;
-    border-left:`
 
 
-  const DropdownContent = styled.div`
-  display: none;
-  position: absolute;
-  background-color: #171923;
-  min-width: 160px;
-  z-index: 1;
-`;
