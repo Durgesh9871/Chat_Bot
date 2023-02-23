@@ -9,7 +9,13 @@ const MainAdminPage = () => {
      <Link to="/"> <Box>Home Page</Box> </Link>
      <Link to="/adminPage"> <Box>Admin Page</Box> </Link>
       </Box>
-      hello world 
+
+  {/*  Main Admin Page Started from here ---------- */}
+   <Box>
+   hello world 
+   </Box>
+
+     
     </div>
   )
 }
