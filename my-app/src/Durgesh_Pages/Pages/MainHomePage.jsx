@@ -1,4 +1,4 @@
-import { Box, Button, Img } from '@chakra-ui/react'
+import { Box, Button, Heading, Img , Text} from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Mainhomepage.css"
