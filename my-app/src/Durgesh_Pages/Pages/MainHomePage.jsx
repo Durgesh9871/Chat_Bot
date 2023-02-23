@@ -91,6 +91,8 @@ performance in unpredictable conditions.</Text>
       <Box id="mainImageBoxThree" border="2px  red"  textAlign="center" key={id}>
         <Img src={item.image} width="100%"></Img>
         <Text fontWeight="600" color="#343333" fontSize="15px" mt="4px">{item.text}</Text>
+        <Text fontWeight="400" color="#b2b4b7" fontSize="14px" mt="4px">{item.para}</Text>
+
       </Box>
     )
   })
