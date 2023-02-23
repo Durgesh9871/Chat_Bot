@@ -4,6 +4,19 @@ import { Link } from 'react-router-dom'
 import "./Mainhomepage.css"
 
 const MainHomePage = () => {
+
+
+  const ImageBox = [
+    {
+      image:"https://eddiebauer.scene7.com/is/image/EBContent/230222_hp_bottoms_V2?$a8$" ,
+      text:"This men"
+    },
+    {image:"https://eddiebauer.scene7.com/is/image/EBContent/230222_hp_bottoms_V2?$a8$" ,
+    text:"This men"},
+    {image:"https://eddiebauer.scene7.com/is/image/EBContent/230222_hp_bottoms_V2?$a8$" ,
+    text:"This men"}
+  ]
+
   return (
     <Box>
       {/* NavBar  ------- */}
@@ -20,10 +33,25 @@ const MainHomePage = () => {
             </Box>
           
           {/*  After MAIN IMAGE HEADING ----------------- */}
-            <Box width="36%" border="2px solid red" m="45px auto 20px auto" textAlign="center" >
+            <Box width={{base:"99%", sm: "95%", md: "75%", lg: "55%",xl: "36%",'2xl': "36%"}} border="2px  red" m="45px auto 25px auto" textAlign="center" >
               <Heading color="#333333">Spring Adventures Are Calling!</Heading>
               <Text color="#97857e">Outfit yourself with tech-enhanced essentials built for superior
 performance in unpredictable conditions.</Text>
+            </Box>
+
+            {/*After heading Main Images -------------------- */}
+            <Box border="2px solid red" height="400px" display="flex" justifyContent="space-between"  >
+
+              {
+                ImageBox.length > 0 && ImageBox.map((item)=>{
+                  return (
+                    <Box border="2px solid red" width="30%">
+                      <Img src={item.image} width="100%"></Img>
+                    </Box>
+                  )
+                })
+              }
+
             </Box>
 
          </Box>
