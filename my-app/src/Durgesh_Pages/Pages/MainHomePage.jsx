@@ -9,12 +9,13 @@ const MainHomePage = () => {
   const ImageBox = [
     {
       image:"https://eddiebauer.scene7.com/is/image/EBContent/230222_hp_bottoms_V2?$a8$" ,
-      text:"This men"
+      text:"The most versatile pants & shorts"
     },
-    {image:"https://eddiebauer.scene7.com/is/image/EBContent/230222_hp_bottoms_V2?$a8$" ,
-    text:"This men"},
-    {image:"https://eddiebauer.scene7.com/is/image/EBContent/230222_hp_bottoms_V2?$a8$" ,
-    text:"This men"}
+    {image:"https://eddiebauer.scene7.com/is/image/EBContent/230222_hp_tops_V2?$a8$" ,
+    text:"The season's best shirts & tees"},
+    {image:"https://eddiebauer.scene7.com/is/image/EBContent/230222_hp_rain_V2?$a8$" ,
+    text:"Don't let the weather keep you inside"
+  }
   ]
 
   return (
@@ -40,13 +41,14 @@ performance in unpredictable conditions.</Text>
             </Box>
 
             {/*After heading Main Images -------------------- */}
-            <Box border="2px solid red" height="400px" display="flex" justifyContent="space-between"  >
+            <Box border="2px  red" height="auto" display="flex" justifyContent="space-evenly" p="0px"  >
 
               {
                 ImageBox.length > 0 && ImageBox.map((item)=>{
                   return (
-                    <Box border="2px solid red" width="30%">
+                    <Box border="2px  red" width="30%" textAlign="center">
                       <Img src={item.image} width="100%"></Img>
+                      <Text>{item.text}</Text>
                     </Box>
                   )
                 })
