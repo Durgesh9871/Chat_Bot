@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import {AiFillHome} from "react-icons/ai";
+import {FaUserAlt} from "react-icons/fa"
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import "./styles.css"
 
 const Sidebar = () => {
@@ -16,15 +17,18 @@ const Sidebar = () => {
 
   return (
     <>
-     
+       <Box border="12px solid yellow">
+        <h1>hdhhd</h1>
+       </Box>
       <SidebarNav isOpen={true}>
         <SidebarWrap>
-          <NavIcon to="#">
+          <NavIcon >
              <Text>Dashboard</Text>
+      
           </NavIcon>
-          <SidebarLink> Home </SidebarLink>
-          <SidebarLink>About</SidebarLink>
-          <SidebarLink >Services</SidebarLink>
+          <SidebarLink> <AiFillHome style={{marginRight:"6px"}} /> Home </SidebarLink>
+          <SidebarLink> <FaUserAlt style={{marginRight:"6px"}}  /> Customers</SidebarLink>
+          
           
          
 
@@ -38,14 +42,15 @@ export {Sidebar}
 
 
 
-const NavIcon = styled(Link)`
+const NavIcon = styled.div`
   margin-left: 2rem;
   font-size: 2rem;
   height: 80px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: #fff;
+  color: #fff ;
+ 
 `;
 
 const SidebarNav = styled.nav`
