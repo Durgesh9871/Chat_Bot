@@ -20,7 +20,7 @@ useEffect(()=>{
    dispatch(getCustomerData)
 },[])
 
-console.log(customerData)
+// console.log(customerData)
 
   return (
     <Box>
