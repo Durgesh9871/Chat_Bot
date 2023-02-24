@@ -48,6 +48,7 @@ const userImage ={
         <Th>Last Name</Th>
         <Th>Email</Th>
         <Th>Phone</Th>
+        <Th>Gender</Th>
         <Th>Active User</Th>
       </Tr>
     </Thead>
@@ -64,6 +65,7 @@ const userImage ={
           <Td >{item.lastName}</Td>
           <Td>{item.email}</Td>
           <Td>{item.mobile}</Td>
+          <Td>{item.gender}</Td>
           <Td >{item.active}</Td>
         </Tr>
         )
