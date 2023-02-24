@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import {AiFillHome} from "react-icons/ai";
+import {AiFillHome, AiOutlineCaretDown} from "react-icons/ai";
 import {FaUserAlt} from "react-icons/fa"
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Menu, MenuButton, MenuItem, MenuList, Text , Button  , Image} from "@chakra-ui/react";
+import {ChevronDownIcon} from "@chakra-ui/icons"
 import "./styles.css"
 
 const Sidebar = () => {
@@ -17,8 +18,22 @@ const Sidebar = () => {
 
   return (
     <>
-       <Box border="12px solid yellow">
-        <h1>hdhhd</h1>
+       <Box background="#171923" height="10vh"  borderBottom="1px solid white" display="flex" justifyContent="flex-end" alignItems="center" padding="0px 100px" >
+        <Menu >
+  {({ isOpen }) => (
+    <> 
+    <Box display="flex" alignItems="center">
+      <Image src="https://bit.ly/dan-abramov" width="35px" borderRadius="100%" border="2px solid white" />
+      <MenuButton isActive={isOpen}  color="#fff" mr="2px" ml="10px" fontSize="20px" >   Durgesh  </MenuButton>
+      <AiOutlineCaretDown  color="#fff" fontSize="10px" style={{marginTop:"10px"}} />
+      </Box>
+      {/* <MenuList background="#171923" border="1px solid #fff" padding="10px">
+        <MenuItem background="#171923"  color="#fff">Download</MenuItem>
+        <MenuItem background="#171923"  color="#fff" >Create a Copy</MenuItem>
+      </MenuList> */}
+    </>
+  )}
+</Menu>
        </Box>
       <SidebarNav isOpen={true}>
         <SidebarWrap>
@@ -64,6 +79,7 @@ const SidebarNav = styled.nav`
   left: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
   transition: 350ms;
   z-index: 10;
+  border-right:2px solid white ; 
 `;
 
 const SidebarWrap = styled.div`
@@ -80,9 +96,10 @@ const SidebarLink = styled.div`
   text-decoration: none;
   font-size: 18px;
   &:hover {
-    background-color: #20A7DB;
+    background-color: #00bffe;
    
     cursor: pointer;
+   
   }
 `;
 
