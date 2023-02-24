@@ -24,7 +24,7 @@ const Sidebar = () => {
     <> 
     <Box display="flex" alignItems="center">
       <Image src="https://bit.ly/dan-abramov" width="35px" borderRadius="100%" border="2px solid white" />
-      <MenuButton isActive={isOpen}  color="#fff" mr="2px" ml="10px" fontSize="20px" >   Durgesh  </MenuButton>
+      <MenuButton isActive={isOpen}  color="#fff" mr="2px" ml="10px" fontSize="20px">   Durgesh  </MenuButton>
       <AiOutlineCaretDown  color="#fff" fontSize="10px" style={{marginTop:"10px"}} />
       </Box>
       {/* <MenuList background="#171923" border="1px solid #fff" padding="10px">
