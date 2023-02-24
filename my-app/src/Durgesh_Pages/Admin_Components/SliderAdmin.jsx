@@ -30,7 +30,8 @@ const Sidebar = () => {
       {/* <MenuList background="#171923" border="1px solid #fff" padding="10px">
         <MenuItem background="#171923"  color="#fff">Download</MenuItem>
         <MenuItem background="#171923"  color="#fff" >Create a Copy</MenuItem>
-      </MenuList> */}
+      </MenuList> */
+      }
     </>
   )}
 </Menu>
