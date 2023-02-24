@@ -8,8 +8,10 @@ const CustomerPage = () => {
        <Sidebar />
        
        {/*  Customer Page Started from here --------- */}
-       <Box>
-           <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae impedit harum porro iure temporibus possimus inventore! Illo eaque, sapiente quas dicta tempora, ducimus neque quia mollitia provident ex pariatur vitae?</Text>
+       <Box background="#171923" height="100vh">
+           <Text color="white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae impedit harum porro iure temporibus possimus inventore! Illo eaque, sapiente quas dicta tempora, ducimus neque quia mollitia provident ex pariatur vitae?</Text>
+
+
        </Box>
     </Box>
   )
