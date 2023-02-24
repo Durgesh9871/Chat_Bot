@@ -18,7 +18,7 @@ const Sidebar = () => {
 
   return (
     <>
-       <Box background="#171923" height="10vh"  borderBottom="2px solid white" display="flex" justifyContent="flex-end" alignItems="center" padding="0px 100px" >
+       <Box background="#171923" height="10vh"  borderBottom="1px solid white" display="flex" justifyContent="flex-end" alignItems="center" padding="0px 100px" >
         <Menu >
   {({ isOpen }) => (
     <> 
@@ -80,7 +80,7 @@ const SidebarNav = styled.nav`
   left: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
   transition: 350ms;
   z-index: 10;
-  border-right:2px solid white ; 
+  border-right:1px solid white ; 
 `;
 
 const SidebarWrap = styled.div`

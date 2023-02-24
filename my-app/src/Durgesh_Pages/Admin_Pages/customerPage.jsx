@@ -1,4 +1,4 @@
-import { Box , Text } from '@chakra-ui/react'
+import { Box , Heading, Text } from '@chakra-ui/react'
 import React from 'react'
 import {Sidebar} from "../Admin_Components/SliderAdmin"
 
@@ -9,8 +9,11 @@ const CustomerPage = () => {
        
        {/*  Customer Page Started from here --------- */}
        <Box background="#171923" height="100vh">
+
+        {/*  Main box of customer  */}
          <Box width="81%" border="1px red" height="100vh" marginLeft="auto" >
-    <Text color="#fff">njdbhjd</Text>
+         <Heading color="#fff">Customers</Heading>
+
          </Box>
 
        </Box>
