@@ -25,7 +25,6 @@ const CustomerPage = () => {
         <Th>Last Name</Th>
         <Th>Email</Th>
         <Th>Phone</Th>
-        <Th>Adress</Th>
         <Th>Active User</Th>
       </Tr>
     </Thead>
