@@ -15,7 +15,7 @@ import { Provider } from 'react-redux';
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 root.render(
-  <Provider>
+  <Provider store = {store} >
   <ChakraProvider>
 <BrowserRouter>
     <App />
