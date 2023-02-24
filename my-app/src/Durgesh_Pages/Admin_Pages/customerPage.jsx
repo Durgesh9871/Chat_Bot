@@ -24,7 +24,8 @@ const userImage ={
   female:"https://cdn-icons-png.flaticon.com/128/6997/6997662.png" , 
   male:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOnyqrxK4zSTIzWLbCQSBMxYgT2B4U0jv6JMJ-Aezj-kkKqSl7GShdy8jPY0HowqY6KibmsWomG6k&usqp=CAU&ec=48600112" ,
 }
-// console.log(customerData)
+
+// console.log(Date.now())
 
   return (
     <Box>
@@ -45,9 +46,7 @@ const userImage ={
       <Tr>
         <Th>Photo</Th>
         <Th>First Name</Th>
-        <Th>Last Name</Th>
         <Th>Email</Th>
-        <Th>Phone</Th>
         <Th>Gender</Th>
         <Th>Active User</Th>
       </Tr>
@@ -62,11 +61,9 @@ const userImage ={
             <Image src={item.gender == "male" ? userImage.male : userImage.female} width="35px" borderRadius="100%" border="2px solid white" />
         </Td>
             <Td>{item.firstNamee}</Td>
-          <Td >{item.lastName}</Td>
           <Td>{item.email}</Td>
-          <Td>{item.mobile}</Td>
           <Td>{item.gender}</Td>
-          <Td >{item.active}</Td>
+          <Td color={item.active == "true" ? "#31ae33" : "red"}>{item.active == "true" ? "Active" :"Last seen"}</Td>
         </Tr>
         )
       })}
