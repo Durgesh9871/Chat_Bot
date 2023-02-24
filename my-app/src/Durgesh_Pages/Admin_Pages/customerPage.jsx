@@ -58,7 +58,7 @@ const userImage ={
         return (
           <Tr key={i}>
           <Td>      
-            <Image src={userImage.female} width="35px" borderRadius="100%" border="2px solid white" />
+            <Image src={item.gender == "male" ? userImage.male : userImage.female} width="35px" borderRadius="100%" border="2px solid white" />
         </Td>
             <Td>{item.firstNamee}</Td>
           <Td >{item.lastName}</Td>
