@@ -20,7 +20,7 @@ useEffect(()=>{
    dispatch(getCustomerData)
 },[])
 
-// console.log(customerData)
+console.log(customerData)
 
   return (
     <Box>
@@ -50,11 +50,18 @@ useEffect(()=>{
     <Tbody>
         {/*  Loop starts from here ------------------- */}
 
-      <Tr>
-        <Td>feet</Td>
-        <Td>centimetres (cm)</Td>
-        <Td >30.48</Td>
-      </Tr>
+      {customerData.length > 0 && customerData.map((item,i)=>{
+        return (
+          <Tr key={i}>
+          <Td>{}</Td>
+            <Td>{item.firstNamee}</Td>
+          <Td >{item.lastName}</Td>
+          <Td>{item.email}</Td>
+          <Td>{item.mobile}</Td>
+          <Td >{item.active}</Td>
+        </Tr>
+        )
+      })}
     
     </Tbody>
    
