@@ -1,7 +1,7 @@
 import { Box , Heading, Table, TableCaption, TableContainer, Tbody, Td, Text, Tfoot, Th, Thead, Tr } from '@chakra-ui/react'
 import React,{useEffect} from 'react'
 import {Sidebar} from "../Admin_Components/SliderAdmin"
-import {useDispatch , useSelector} from "react-redux"
+import {shallowEqual, useDispatch , useSelector} from "react-redux"
 import { getCustomerData } from '../../Redux/Customer_Reducer/action'
 
 const CustomerPage = () => {
@@ -14,13 +14,13 @@ const CustomerPage = () => {
       isLoadind:state.CustomerReducer.isLoadind ,
       isError :state.CustomerReducer.isError ,
     }
-})   
+},shallowEqual)   
  
 useEffect(()=>{
    dispatch(getCustomerData)
 },[])
 
-console.log(customerData)
+// console.log(customerData)
 
   return (
     <Box>
