@@ -1,4 +1,4 @@
-import { Box , Heading, Table, TableCaption, TableContainer, Tbody, Td, Text, Tfoot, Th, Thead, Tr } from '@chakra-ui/react'
+import { Box , Heading, Table, TableCaption, TableContainer, Tbody, Td, Text, Tfoot, Th, Thead, Tr , Image} from '@chakra-ui/react'
 import React,{useEffect} from 'react'
 import {Sidebar} from "../Admin_Components/SliderAdmin"
 import {shallowEqual, useDispatch , useSelector} from "react-redux"
@@ -20,6 +20,10 @@ useEffect(()=>{
    dispatch(getCustomerData)
 },[])
 
+const userImage ={
+  female:"https://cdn-icons-png.flaticon.com/128/6997/6997662.png" , 
+  male:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOnyqrxK4zSTIzWLbCQSBMxYgT2B4U0jv6JMJ-Aezj-kkKqSl7GShdy8jPY0HowqY6KibmsWomG6k&usqp=CAU&ec=48600112" ,
+}
 // console.log(customerData)
 
   return (
@@ -53,7 +57,9 @@ useEffect(()=>{
       {customerData.length > 0 && customerData.map((item,i)=>{
         return (
           <Tr key={i}>
-          <Td>{}</Td>
+          <Td>      
+            <Image src={userImage.female} width="35px" borderRadius="100%" border="2px solid white" />
+        </Td>
             <Td>{item.firstNamee}</Td>
           <Td >{item.lastName}</Td>
           <Td>{item.email}</Td>
