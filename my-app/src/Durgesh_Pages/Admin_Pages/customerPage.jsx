@@ -9,8 +9,9 @@ const CustomerPage = () => {
        
        {/*  Customer Page Started from here --------- */}
        <Box background="#171923" height="100vh">
-           <Text color="white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae impedit harum porro iure temporibus possimus inventore! Illo eaque, sapiente quas dicta tempora, ducimus neque quia mollitia provident ex pariatur vitae?</Text>
-
+         <Box width="81%" border="1px red" height="100vh" marginLeft="auto" >
+    <Text color="#fff">njdbhjd</Text>
+         </Box>
 
        </Box>
     </Box>

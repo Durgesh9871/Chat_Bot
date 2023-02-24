@@ -24,14 +24,14 @@ const Sidebar = () => {
     <> 
     <Box display="flex" alignItems="center">
       <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX7hUxA0hBjTCU1gDqz8RoPeOScEcwN-oq0idlRExLh-TXNIrDs7YPQzlticXdn-b02ExMDKkXGik&usqp=CAU&ec=48600112" width="35px" borderRadius="100%" border="2px solid white" />
-      <MenuButton isActive={isOpen}  color="#fff" mr="2px" ml="10px" fontSize="20px">   Durgesh  </MenuButton>
+      <MenuButton   color="#fff" mr="2px" ml="10px" fontSize="20px">   Durgesh  </MenuButton>
       <AiOutlineCaretDown  color="#fff" fontSize="10px" style={{marginTop:"10px"}} />
       </Box>
       {/* <MenuList background="#171923" border="1px solid #fff" padding="10px">
         <MenuItem background="#171923"  color="#fff">Download</MenuItem>
         <MenuItem background="#171923"  color="#fff" >Create a Copy</MenuItem>
-      </MenuList> */
-      }
+      </MenuList>  */}
+      
     </>
   )}
 </Menu>
@@ -71,7 +71,7 @@ const NavIcon = styled.div`
 
 const SidebarNav = styled.nav`
   background: #171923;
-  width: 250px;
+  width: 18% ;
   height: 100vh;
   display: flex;
   justify-content: center;
