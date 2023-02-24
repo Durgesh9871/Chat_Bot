@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {AiFillHome, AiOutlineCaretDown} from "react-icons/ai";
+import {AiFillDelete, AiFillHome, AiOutlineCaretDown} from "react-icons/ai";
 import {FaUserAlt} from "react-icons/fa"
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -44,6 +44,8 @@ const Sidebar = () => {
           </NavIcon>
       <Link to="/">  <SidebarLink> <AiFillHome style={{marginRight:"6px"}} /> Home </SidebarLink> </Link>  
           <Link to="/customerPageAdmin"> <SidebarLink> <FaUserAlt style={{marginRight:"6px"}}  /> Customers</SidebarLink> </Link>
+          <Link to="/deltePageAdmin"> <SidebarLink> <AiFillDelete style={{marginRight:"6px"}}  /> Delete Products</SidebarLink> </Link>
+
           
           
          
