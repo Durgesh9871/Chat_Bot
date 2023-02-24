@@ -39,7 +39,7 @@ const Sidebar = () => {
       <SidebarNav isOpen={true}>
         <SidebarWrap>
           <NavIcon >
-             <Text>Dashboard</Text>
+           <Link to="/adminPage">  <Text>Dashboard</Text> </Link>
       
           </NavIcon>
       <Link to="/">  <SidebarLink> <AiFillHome style={{marginRight:"6px"}} /> Home </SidebarLink> </Link>  
