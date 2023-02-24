@@ -30,11 +30,12 @@ const CustomerPage = () => {
       </Tr>
     </Thead>
     <Tbody>
+        {/*  Loop starts from here ------------------- */}
 
       <Tr>
         <Td>feet</Td>
         <Td>centimetres (cm)</Td>
-        <Td isNumeric>30.48</Td>
+        <Td >30.48</Td>
       </Tr>
     
     </Tbody>
