@@ -43,7 +43,7 @@ const Sidebar = () => {
       
           </NavIcon>
           <SidebarLink> <AiFillHome style={{marginRight:"6px"}} /> Home </SidebarLink>
-          <SidebarLink> <FaUserAlt style={{marginRight:"6px"}}  /> Customers</SidebarLink>
+          <Link to="/customerPageAdmin"> <SidebarLink> <FaUserAlt style={{marginRight:"6px"}}  /> Customers</SidebarLink> </Link>
           
           
          
