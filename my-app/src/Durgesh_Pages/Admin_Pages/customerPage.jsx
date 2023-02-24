@@ -40,7 +40,7 @@ const userImage ={
              {/*  TABLE IS STARTED FROM HERE -------------------------- */}
              <TableContainer color="#fff">
   <Table variant='simple'>
-    <TableCaption color="#fff" placement="top">Users Data </TableCaption>
+    <TableCaption  placement="top">Users Data </TableCaption>
     <Thead>
       <Tr>
         <Th>Photo</Th>
