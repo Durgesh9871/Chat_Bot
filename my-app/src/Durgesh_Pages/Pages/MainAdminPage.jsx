@@ -11,7 +11,7 @@ const MainAdminPage = () => {
    <Box backgroundColor="#171923" border="2px   red" height="100vh">
    <Sidebar />
      
-   <Box width="81%" border="1px red" height="auto" marginLeft="auto" >
+   <Box width="81%" border="1px red" height="auto" marginLeft="auto" color="#fff" >
     jsj
    </Box>
 
