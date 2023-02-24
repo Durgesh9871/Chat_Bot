@@ -34,7 +34,7 @@ const userImage ={
        <Box background="#171923" height="100vh">
 
         {/*  Main box of customer  */}
-         <Box width="81%" border="1px red" height="100vh" marginLeft="auto" >
+         <Box width="81%" border="1px red" height="auto" marginLeft="auto" >
          <Heading color="#fff" fontWeight="500">Customers</Heading>
              
              {/*  TABLE IS STARTED FROM HERE -------------------------- */}
