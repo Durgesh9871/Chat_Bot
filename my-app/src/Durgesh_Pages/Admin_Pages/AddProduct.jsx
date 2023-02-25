@@ -2,7 +2,25 @@ import { Box, FormControl, FormLabel, Heading, Input } from '@chakra-ui/react'
 import React from 'react'
 import { Sidebar } from '../Admin_Components/SliderAdmin'
 
+
+const initialState = {
+
+}
+
+const reducer = (state , action)=>{
+     switch(action.type){
+        default:
+            return state 
+     }
+}
+
+
 const AddProduct = () => {
+
+
+
+
+
   return (
     <Box>
         <Sidebar />
@@ -14,7 +32,7 @@ const AddProduct = () => {
 
            {/*  Form Starts from here ------ */}
               <Box width="40%" border="1px  white" margin="auto" shadow="2xl" padding="30px">
-
+        <form>
            <FormControl isRequired  color="#fff" mt="10px">
          <FormLabel>Title</FormLabel>
          <Input placeholder='Title of Product' />
@@ -64,6 +82,8 @@ const AddProduct = () => {
          <FormLabel>Back Image</FormLabel>
          <Input placeholder='Back Image of Product ' />
           </FormControl>
+
+          </form>
 
           </Box>
 
