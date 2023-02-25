@@ -54,7 +54,7 @@ const AddProduct = () => {
            
           <FormControl isRequired color="#fff" mt="20px" >
          <FormLabel>Category</FormLabel>
-         <Input placeholder='Category of Product' />
+         <Input placeholder='Category of Product' value={state.categories}  onChange={(e) => dispatch({type:"CATEGORY" , payload:e.target.value})} />
           </FormControl>
 
           <FormControl isRequired color="#fff" mt="20px" >
