@@ -90,7 +90,6 @@ const AddProduct = () => {
 dispatchData(sendProductData(data))
 dispatch({type:"RESET"})
 
-  console.log(data)
  }
 
 
