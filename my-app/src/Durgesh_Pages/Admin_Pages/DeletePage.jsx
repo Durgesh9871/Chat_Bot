@@ -23,13 +23,13 @@ const DeletePage = () => {
   return (
     <Box>
        <Sidebar />
-       <Box background="#171923" height="100vh">
+       <Box background="#171923" height="auto">
 
        {/*  Delete Page Started from here ---------------------- */}
        <Box width="81%" border="1px red" height="auto" marginLeft="auto" >
             
 
-       <SimpleGrid columns={{base:1, sm: 1, md: 2, lg: 3,xl: 3,'2xl': 3,}} spacingY={10}  >
+       <SimpleGrid columns={{base:1, sm: 1, md: 2, lg: 3,xl: 3,'2xl': 3,}} spacingY={10} pt="40px" >
 
             {productArrayLaptop.length > 0 && productArrayLaptop.map((item)=>{
               return (
