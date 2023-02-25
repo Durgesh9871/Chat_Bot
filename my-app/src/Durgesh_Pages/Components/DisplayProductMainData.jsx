@@ -122,22 +122,7 @@ const closeProductHover = ()=>{
          <Box>
          <Heading fontSize="15.5px" fontWeight="600" color="#303030" textAlign="left">{model}</Heading>
          </Box>
-         {/* <Box >
-        
-         {Array(5)
-            .fill('')
-            .map((_, i) => (
-              
-            
-              <StarIcon
-                key={i}
-                color={i < (review) ? 'teal.500' : 'gray.300'} 
-                width="12px" height="12px"
-              />
-             
-            ))}
-         </Box> */}
-        
+
          </Box> }
 
          {/*  Ends here hover ------------------------------------ */}
