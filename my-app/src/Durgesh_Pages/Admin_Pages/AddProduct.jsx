@@ -65,23 +65,24 @@ const AddProduct = () => {
  let data = {
     rating:state.rating , 
     categories:[state.categories] ,
-    title:"" ,
-    price: 200 , 
-    realPrice: 400 , 
-    brand :"" ,
-    description :"" ,
-    color:"" ,
-    discount :"" ,
-    reviews:[],
-    backImage:"" ,
-    frontImage:"" , 
-    sideImage:"",
+    title: state.title ,
+    price: state.price , 
+    realPrice: state.realPrice , 
+    brand :state.brand ,
+    description :state.description ,
+    color: state.color ,
+    discount :5 ,
+    reviews:[  "Great Product", "Value for money"],
+    Images:[
+        {"imageFront":state.frontImage} , {"imageFront":state.sideImage} , {"imageFront":state.backImage}
+    ] ,
+    mainImage:state.frontImage , 
+
+}
 
 
- }
 
-
-  console.log(state)
+  console.log(data)
  }
 
 
