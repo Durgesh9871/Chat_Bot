@@ -136,13 +136,13 @@ useEffect(()=>{
          <Box display="flex" justifyContent="space-evenly">
 
         
-          <Chart type="pie" width="450px"  height="400px"  series={[10 , activeCount]  }  options ={{
+          <Chart type="pie" width="450px"  height="400px"  series={[10 , 8]  }  options ={{
       title:{text:"Total Cart Data"} ,
      
 
       noData:{text:"Empty"} ,
 
-      labels:["Total Orders" , "Active User"]
+      labels:["Total Cart Items" , "Total User"]
      }}>
 
      </Chart>
@@ -150,19 +150,19 @@ useEffect(()=>{
      {/* Second --- */}
      <Chart type="bar" width="450px"  height="400px" options={{ 
        xaxis:{
-              categories:["Total Order" , "Active User" ]
+              categories:["Total Cart Item" , "Total User" ]
             },
-           title:{text:"Total order we have from active users"} ,
+           title:{text:"Total Items Present In cart "} ,
           }}
 
             series={[{
-                name: 'Total Order',
+                name: 'Total Cart Items',
                 data: [ 10 ],
                 
                
             },{
-                name: 'Active User',
-                data: [activeCount ]
+                name: 'Total User',
+                data: [8 ]
             }
           ]}
 
