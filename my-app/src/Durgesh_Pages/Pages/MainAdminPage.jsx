@@ -26,7 +26,7 @@ useEffect(()=>{
     <>
 
   {/*  Main Admin Page Started from here ---------- */}
-   <Box backgroundColor="" border="2px   red" height="100vh">
+   <Box backgroundColor="#171923" border="2px   red" height="100vh">
    <Sidebar />
      
    <Box width={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "81%", '2xl': "81%" }} border="1px red" height="auto" marginLeft="auto" color="#fff" >
@@ -34,12 +34,12 @@ useEffect(()=>{
           users - [ududu ] */}
           {/* orderOverall - [ product-123 , id-jdbhdh  , price 2]  */}
       
-     <Chart type="pie" width="450px" height="400px" series={[32,56,54,44 ,70]} options ={{
-      title:{text:"Active User Data"},
+     <Chart type="pie" width="450px"  height="400px" series={[12 , 20]}  options ={{
+      title:{text:"Active User Data"} ,
 
       noData:{text:"Empty"} ,
-      
-      labels:['mayh' ,'june' ,"july" ,'aut' ,"sep"]
+
+      labels:["Active User" , "Not Active User"]
      }}>
 
      </Chart>
