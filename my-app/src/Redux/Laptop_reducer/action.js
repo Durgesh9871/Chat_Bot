@@ -10,7 +10,6 @@ const getDataProduct = (dispatch)=>{
         .catch(()=> dispatch({type:GETPRODUCTLAPTOPDATA_FAILURE}))
 }
 
-export {getDataProduct}
 
 
 
@@ -21,6 +20,15 @@ const DeleteProductData =(id)=> (dispatch)=>{
         .catch((err)=> console.log(err , "Error in Deleting the data") )
 }
 
-export {DeleteProductData}
+
+
+const sendProductData = (data)=>(dispatch)=>{
+        dispatch({type:"SEND_PRODUCT_REQUEST"})
+        return axios.post(`http://localhost:8080/mens` , data)
+        .then()
+        .catch((err)=>console.log(err , "ERROR IN DATA SENDING"))
+}
+
+export {DeleteProductData , sendProductData , getDataProduct}
 
 
