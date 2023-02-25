@@ -26,31 +26,31 @@ const reducer = (state , action)=>{
         return {...state , title:action.payload}
 
      case "CATEGORY":
-         return {...state , title:action.payload}
+         return {...state , categories:action.payload}
     
     case "BRAND":
-        return {...state , title:action.payload}
+        return {...state , brand:action.payload}
   
     case "DESCRIPTION":
-            return {...state , title:action.payload}
+            return {...state , description:action.payload}
     
     case "COLOR":
-         return {...state , title:action.payload}
+         return {...state , color:action.payload}
         
     case "REALPRICE":
-            return {...state , title:action.payload}
+            return {...state , realPrice:action.payload}
     
     case "PRICE":
-          return {...state , title:action.payload}
+          return {...state , price:action.payload}
         
     case "FRONTIMAGE":
-         return {...state , title:action.payload}
+         return {...state , frontImage:action.payload}
 
     case "SIDEIMAGE":
-            return {...state , title:action.payload}
+            return {...state , sideImage:action.payload}
     
     case "BACKIMAGE":
-          return {...state , title:action.payload}
+          return {...state , backImage:action.payload}
 
         default:
             return state 
