@@ -61,8 +61,27 @@ const reducer = (state , action)=>{
 const AddProduct = () => {
     const [state , dispatch] = useReducer(reducer , initialState)
 
- const handleForm = ()=>{
+ const handleForm = (state)=>{
+ let data = {
+    rating:state.rating , 
+    categories:[state.categories] ,
+    title:"" ,
+    price: 200 , 
+ realPrice: 400 , 
+ brand :"" ,
+ description :"" ,
+ color:"" ,
+ discount :"" ,
+ reviews:[],
+  backImage:"" ,
+  frontImage:"" , 
+  sideImage:"",
 
+
+ }
+
+
+  console.log(state)
  }
 
 
@@ -80,7 +99,7 @@ const AddProduct = () => {
            {/*  Form Starts from here ------ */}
               <Box width="40%" border="1px solid white" margin="auto" shadow="2xl" padding="30px">
 
-        <form onSubmit={()=>handleForm}>
+        
            <FormControl isRequired  color="#fff" mt="10px">
          <FormLabel>Title</FormLabel>
          <Input placeholder='Title of Product' value={state.title} onChange={(e) => dispatch({type:"TITLE" , payload:e.target.value })} />
@@ -132,8 +151,8 @@ const AddProduct = () => {
           </FormControl>
 
           
-          <Button isDisabled={state.title == "" || state.categories == "" || state.price == "" || state.realPrice == "" || state.frontImage == "" || state.backImage == "" || state.sideImage == ""  || state.color == "" || state.description == "" || state.brand == ""} fontWeight="600" fontSize="20px" background="#171923" color="#fff"  border="2px solid #fff" variant="unstyled" p="0px 50px" mt="55px" ml="240px">Submit</Button>
-          </form>
+          <Button onClick={()=>handleForm(state)} isDisabled={state.title == "" || state.categories == "" || state.price == "" || state.realPrice == "" || state.frontImage == "" || state.backImage == "" || state.sideImage == ""  || state.color == "" || state.description == "" || state.brand == ""} fontWeight="600" fontSize="20px" background="#171923" color="#fff"  border="2px solid #fff" variant="unstyled" p="0px 50px" mt="55px" ml="240px">Submit</Button>
+        
 
           </Box>
 
