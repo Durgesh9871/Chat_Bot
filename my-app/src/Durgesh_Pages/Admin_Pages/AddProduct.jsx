@@ -14,13 +14,43 @@ const initialState = {
  color:"" ,
  discount :"" ,
  reviews:[],
- Images:[] ,
- mainImage:"",
+  backImage:"" ,
+  frontImage:"" , 
+  sideImage:"",
 }
 
 const reducer = (state , action)=>{
      switch(action.type){
 
+     case "TITLE":
+        return {...state , title:action.payload}
+
+     case "CATEGORY":
+         return {...state , title:action.payload}
+    
+    case "BRAND":
+        return {...state , title:action.payload}
+  
+    case "DESCRIPTION":
+            return {...state , title:action.payload}
+    
+    case "COLOR":
+         return {...state , title:action.payload}
+        
+    case "REALPRICE":
+            return {...state , title:action.payload}
+    
+    case "PRICE":
+          return {...state , title:action.payload}
+        
+    case "FRONTIMAGE":
+         return {...state , title:action.payload}
+
+    case "SIDEIMAGE":
+            return {...state , title:action.payload}
+    
+    case "BACKIMAGE":
+          return {...state , title:action.payload}
 
         default:
             return state 
@@ -59,42 +89,42 @@ const AddProduct = () => {
 
           <FormControl isRequired color="#fff" mt="20px"  >
          <FormLabel>Brand</FormLabel>
-         <Input placeholder='Brand of Product' value={state.categories}  onChange={(e) => dispatch({type:"CATEGORY" , payload:e.target.value})}  />
+         <Input placeholder='Brand of Product' value={state.brand}  onChange={(e) => dispatch({type:"BRAND" , payload:e.target.value})}  />
           </FormControl>
 
           <FormControl isRequired color="#fff" mt="20px" >
          <FormLabel>Description</FormLabel>
-         <Input placeholder='Description about the Product' value={state.categories}  onChange={(e) => dispatch({type:"CATEGORY" , payload:e.target.value})}  />
+         <Input placeholder='Description about the Product' value={state.description}  onChange={(e) => dispatch({type:"DESCRIPTION" , payload:e.target.value})}  />
           </FormControl>
 
           <FormControl isRequired color="#fff" mt="20px" >
          <FormLabel>Color</FormLabel>
-         <Input placeholder='Color of Product' value={state.categories}  onChange={(e) => dispatch({type:"CATEGORY" , payload:e.target.value})}  />
+         <Input placeholder='Color of Product' value={state.color}  onChange={(e) => dispatch({type:"COLOR" , payload:e.target.value})}  />
           </FormControl>
 
           <FormControl isRequired color="#fff" mt="20px" >
          <FormLabel>Actual Price</FormLabel>
-         <Input placeholder='Real Price of Product ' value={state.categories}  onChange={(e) => dispatch({type:"CATEGORY" , payload:e.target.value})}  />
+         <Input placeholder='Real Price of Product ' value={state.realPrice}  onChange={(e) => dispatch({type:"REALPRICE" , payload:e.target.value})}  />
           </FormControl>
 
           <FormControl isRequired color="#fff" mt="20px" >
          <FormLabel>Price</FormLabel>
-         <Input placeholder='Price after Discount'  value={state.categories}  onChange={(e) => dispatch({type:"CATEGORY" , payload:e.target.value})}  />
+         <Input placeholder='Price after Discount'  value={state.price}  onChange={(e) => dispatch({type:"PRICE" , payload:e.target.value})}  />
           </FormControl>
 
           <FormControl isRequired color="#fff" mt="20px" >
          <FormLabel>Image</FormLabel>
-         <Input placeholder='Main Image of Product'  value={state.categories}  onChange={(e) => dispatch({type:"CATEGORY" , payload:e.target.value})} />
+         <Input placeholder='Main Image of Product'  value={state.frontImage}  onChange={(e) => dispatch({type:"FRONTIMAGE" , payload:e.target.value})} />
           </FormControl>
 
           <FormControl isRequired color="#fff" mt="20px" >
          <FormLabel>Side Image</FormLabel>
-         <Input placeholder='Side Image of Product'  value={state.categories}  onChange={(e) => dispatch({type:"CATEGORY" , payload:e.target.value})}  />
+         <Input placeholder='Side Image of Product'  value={state.sideImage}  onChange={(e) => dispatch({type:"SIDEIMAGE" , payload:e.target.value})}  />
           </FormControl>
 
           <FormControl isRequired color="#fff" mt="20px" >
          <FormLabel>Back Image</FormLabel>
-         <Input placeholder='Back Image of Product '  value={state.categories}  onChange={(e) => dispatch({type:"CATEGORY" , payload:e.target.value})}  />
+         <Input placeholder='Back Image of Product '  value={state.backImage}  onChange={(e) => dispatch({type:"BACKIMAGE" , payload:e.target.value})}  />
           </FormControl>
 
           </form>
