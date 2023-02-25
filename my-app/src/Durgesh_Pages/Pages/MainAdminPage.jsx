@@ -41,14 +41,14 @@ useEffect(()=>{
    <Box backgroundColor="#171923" border="2px   red" height="100%">
    <Sidebar />
      
-   <Box width={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "81%", '2xl': "81%" }} border="1px  red" height="auto" marginLeft="auto" p="50px 50px" display="flex"  >
+   <Box width={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "81%", '2xl': "81%" }} border="1px  red" height="auto" marginLeft="auto" p="50px 0px" display="flex" justifyContent="space-evenly"  >
          {/* Cart- 100      
           users - [ududu ] */}
           {/* orderOverall - [ product-123 , id-jdbhdh  , price 2]  */}
       
-     <Chart type="pie" width="450px"  height="400px"  series={[customerData.length-activeCount , activeCount]}  options ={{
+     <Chart type="pie" width="450px"  height="400px"  series={[customerData.length-activeCount , activeCount]  }  options ={{
       title:{text:"Active User Data"} ,
-    
+     
 
       noData:{text:"Empty"} ,
 
@@ -65,11 +65,12 @@ useEffect(()=>{
             }}}
 
             series={[{
-                name: 'series-1',
+                name: 'Users Not Active',
                 data: [ customerData.length-activeCount ],
-                color:"red"
+                color:"#ec4b6b" , 
+               
             },{
-                name: 'series-2',
+                name: 'Active User',
                 data: [activeCount ,]
             }
           ]}
