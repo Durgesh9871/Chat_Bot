@@ -2,7 +2,7 @@ import {GETPRODUCTLAPTOPDATA_REQUEST ,GETPRODUCTLAPTOPDATA_SUCCESS,GETPRODUCTLAP
 
 
 const initialState = {
-    loading: true ,
+    loading: false ,
     post :[] ,
     isError: false ,
 }
@@ -11,11 +11,11 @@ const initialState = {
 const LaptopReducer = (oldState=initialState, action)=>{
    switch(action.type){
     case GETPRODUCTLAPTOPDATA_REQUEST:
-        return{...oldState ,loading:false }
+        return{...oldState ,loading:true }
     case GETPRODUCTLAPTOPDATA_SUCCESS:
-        return{...oldState , post:action.payload , loading:true} 
+        return{...oldState , post:action.payload , loading:false} 
     case GETPRODUCTLAPTOPDATA_FAILURE:
-        return{...oldState , isError:true , loading:true }  
+        return{...oldState , isError:true , loading:false }  
        default:
         return oldState ; 
    }

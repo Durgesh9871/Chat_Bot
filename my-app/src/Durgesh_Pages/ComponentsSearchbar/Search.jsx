@@ -5,27 +5,28 @@ import { Box, Input, SimpleGrid } from '@chakra-ui/react';
 import { DisplayProductMainData } from '../Components/DisplayProductMainData';
 import { SearchIcon } from '@chakra-ui/icons';
 import { LoadingIndicator } from './LoadingIndicator';
+import { useDispatch, useSelector } from 'react-redux';
+import { getDataProduct } from '../../Redux/Laptop_reducer/action';
 
 
 const Search = () => {
-	const [loading, setLoading] = useState(false);
-	const [post, setPost] = useState([]);
+	// const [loading, setLoading] = useState(false);
+	// const [post, setPost] = useState([]);
 	const [searchTitle, setSearchTitle] = useState('');
     
-	
-
+	const {isError ,loading,post} = useSelector((state) => {
+		return {
+			loading: state.LaptopReducer.loading ,
+		  post:state.LaptopReducer.post ,
+		  isError :state.LaptopReducer.isError ,
+		}
+	})   
+  const dispatch = useDispatch()
 	useEffect(() => {
-		const loadPosts = async () => {
-			setLoading(true);
-			const response = await axios.get(
-				'http://localhost:8080/mens'
-			);
-			setPost(response.data);
-			setLoading(false);
-		};
-		loadPosts();
+	    dispatch(getDataProduct)
 	}, []);
-
+   
+	console.log(post)
 	
 	return (
 		<Box className="container">
