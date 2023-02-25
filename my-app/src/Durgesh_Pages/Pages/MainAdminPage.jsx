@@ -42,7 +42,7 @@ useEffect(()=>{
    <Sidebar />
      
    <Box width={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "81%", '2xl': "81%" }} border="1px  red" height="auto" marginLeft="auto" p="50px 0px" display="flex" justifyContent="space-evenly"  >
-     <Text color="#fff" fontSize="20px">Total Users : {customerData.length} </Text>
+     {/* <Text color="#fff" fontSize="20px">Total Users : {customerData.length} </Text> */}
          {/* Cart- 100      
           users - [ududu ] */}
           {/* orderOverall - [ product-123 , id-jdbhdh  , price 2]  */}
@@ -82,10 +82,48 @@ useEffect(()=>{
    </Box>
 
      {/*  ORDER DETAILS ------------------------------- */}
-     <Box width={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "81%", '2xl': "81%" }} border="1px  red" height="auto" marginLeft="auto" p="50px 0px" display="flex" justifyContent="space-evenly"  >
+     <Box width={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "81%", '2xl': "81%" }} border="1px  red" height="auto" marginLeft="auto" p="50px 0px" >
+       <Text color="#fff" textAlign="center" fontSize="25px" mb="25px">Order Details</Text>
+       
+       {/*  Chart start from here ----order ----  BAR GRAPH ---------------*/}
+         <Box display="flex" justifyContent="space-evenly">
 
-      hdhdh
+         <Chart type="bar" width="450px"  height="400px" options={{ 
+       xaxis:{
+              categories:["Total Order" , "Active User" ]
+            },
+           title:{text:"Total order we have from active users"} ,
+          }}
 
+            series={[{
+                name: 'Total Order',
+                data: [ 10 ],
+                
+               
+            },{
+                name: 'Active User',
+                data: [activeCount ]
+            }
+          ]}
+
+          >   </Chart>
+
+
+          {/*  Second */}
+          <Chart type="pie" width="450px"  height="400px"  series={[customerData.length-activeCount , activeCount]  }  options ={{
+      title:{text:"Data"} ,
+     
+
+      noData:{text:"Empty"} ,
+
+      labels:["Not Active User" , "Active User"]
+     }}>
+
+     </Chart>
+              
+
+          </Box> 
+    
       </Box>
 
    </Box>
