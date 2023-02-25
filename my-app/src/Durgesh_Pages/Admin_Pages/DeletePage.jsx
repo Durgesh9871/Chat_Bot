@@ -3,22 +3,14 @@ import React, { useEffect } from 'react'
 import { useSelector , useDispatch} from 'react-redux'
 import { getDataProduct } from '../../Redux/Laptop_reducer/action'
 import { Sidebar } from '../Admin_Components/SliderAdmin'
-import { DisplayProductMainData } from '../Components/DisplayProductMainData'
+import {Search} from "../ComponentsSearchbar/Search"
+
+
+
+
 
 const DeletePage = () => {
 
-
-    const {isLaptopError ,isLaptopLoading,productArrayLaptop} = useSelector((state) => {
-        return {
-          isLaptopLoading: state.LaptopReducer.isLaptopLoading ,
-          productArrayLaptop:state.LaptopReducer.productArrayLaptop ,
-          isLaptopError :state.LaptopReducer.isLaptopError ,
-        }
-    })   
-    const dispatch = useDispatch()
-    useEffect(()=>{
-         dispatch(getDataProduct)
-    },[])
 
   return (
     <Box>
@@ -29,18 +21,9 @@ const DeletePage = () => {
        <Box width="81%" border="1px red" height="auto" marginLeft="auto" >
             
 
-       <SimpleGrid columns={{base:1, sm: 1, md: 2, lg: 3,xl: 3,'2xl': 3,}} spacingY={10} pt="40px" >
-
-            {productArrayLaptop.length > 0 && productArrayLaptop.map((item)=>{
-              return (
-            <DisplayProductMainData key= {item.id} uniqueId={item.id}  id={item.id} src={item.Images} name={item.title} model={item.brand}    price={item.price}    review={item.rating}  realPrice={item.realPrice} isLaptopLoading={isLaptopLoading} mainImage={item.mainImage} />
-            
-              )
-            })}
-
-            
-        
-          </SimpleGrid>
+       <Box >
+             <Search />
+      </Box>
         
 
        </Box>
