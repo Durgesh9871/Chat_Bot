@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Box } from '@chakra-ui/react'
+import { Box  , Text } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import {Sidebar} from "../Admin_Components/SliderAdmin"
 import { getCustomerData } from '../../Redux/Customer_Reducer/action'
@@ -42,6 +42,7 @@ useEffect(()=>{
    <Sidebar />
      
    <Box width={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "81%", '2xl': "81%" }} border="1px  red" height="auto" marginLeft="auto" p="50px 0px" display="flex" justifyContent="space-evenly"  >
+     <Text color="#fff" fontSize="20px">Total Users : {customerData.length} </Text>
          {/* Cart- 100      
           users - [ududu ] */}
           {/* orderOverall - [ product-123 , id-jdbhdh  , price 2]  */}
@@ -77,9 +78,15 @@ useEffect(()=>{
 
               
     >   </Chart>
-
-
+     
    </Box>
+
+     {/*  ORDER DETAILS ------------------------------- */}
+     <Box width={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "81%", '2xl': "81%" }} border="1px  red" height="auto" marginLeft="auto" p="50px 0px" display="flex" justifyContent="space-evenly"  >
+
+      hdhdh
+
+      </Box>
 
    </Box>
 
