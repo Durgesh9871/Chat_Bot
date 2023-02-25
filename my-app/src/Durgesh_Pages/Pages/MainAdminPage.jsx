@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import {Sidebar} from "../Admin_Components/SliderAdmin"
@@ -7,6 +7,8 @@ import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 import Chart from "react-apexcharts"
 
 const MainAdminPage = () => {
+  const [active , setActive] = useState([])
+  const [out , setOut] = useState([])
 
   const dispatch = useDispatch() 
 
@@ -18,6 +20,9 @@ const MainAdminPage = () => {
     }
 },shallowEqual )   
  
+
+
+
 useEffect(()=>{
    dispatch(getCustomerData)
 },[])
