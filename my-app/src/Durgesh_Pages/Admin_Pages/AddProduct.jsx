@@ -1,14 +1,27 @@
 import { Box, FormControl, FormLabel, Heading, Input } from '@chakra-ui/react'
-import React from 'react'
+import React, { useReducer } from 'react'
 import { Sidebar } from '../Admin_Components/SliderAdmin'
 
 
 const initialState = {
-
+ rating:0 , 
+ categories:[] ,
+ title:"" ,
+ price: 200 , 
+ realPrice: 400 , 
+ brand :"" ,
+ description :"" ,
+ color:"" ,
+ discount :"" ,
+ reviews:[],
+ Images:[] ,
+ mainImage:"",
 }
 
 const reducer = (state , action)=>{
      switch(action.type){
+
+
         default:
             return state 
      }
@@ -16,6 +29,7 @@ const reducer = (state , action)=>{
 
 
 const AddProduct = () => {
+    const [state , dispatch] = useReducer(reducer , initialState)
 
 
 
@@ -35,7 +49,7 @@ const AddProduct = () => {
         <form>
            <FormControl isRequired  color="#fff" mt="10px">
          <FormLabel>Title</FormLabel>
-         <Input placeholder='Title of Product' />
+         <Input placeholder='Title of Product' value={state.title} onChange={(e) => dispatch({type:"TITLE" , payload:e.target.value })} />
           </FormControl>
            
           <FormControl isRequired color="#fff" mt="20px" >
