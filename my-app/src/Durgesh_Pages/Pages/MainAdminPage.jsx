@@ -67,6 +67,7 @@ useEffect(()=>{
             series={[{
                 name: 'series-1',
                 data: [ customerData.length-activeCount ],
+                color:"red"
             },{
                 name: 'series-2',
                 data: [activeCount ,]
