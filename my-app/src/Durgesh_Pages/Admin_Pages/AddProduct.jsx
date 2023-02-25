@@ -1,4 +1,4 @@
-import { Box, FormControl, FormLabel, Heading, Input } from '@chakra-ui/react'
+import { Box, Button, FormControl, FormLabel, Heading, Input } from '@chakra-ui/react'
 import React, { useReducer } from 'react'
 import { Sidebar } from '../Admin_Components/SliderAdmin'
 
@@ -128,6 +128,8 @@ const AddProduct = () => {
          <Input placeholder='Back Image of Product '  value={state.backImage}  onChange={(e) => dispatch({type:"BACKIMAGE" , payload:e.target.value})}  />
           </FormControl>
 
+          
+          <Button  fontWeight="600" fontSize="20px" background="#171923" color="#fff"  border="2px solid #fff" variant="unstyled" p="0px 50px" mt="55px" ml="240px">Submit</Button>
           </form>
 
           </Box>
