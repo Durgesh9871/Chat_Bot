@@ -26,7 +26,7 @@ const Search = () => {
 	    dispatch(getDataProduct)
 	}, []);
    
-	console.log(post)
+	// console.log(post)
 	
 	return (
 		<Box className="container">

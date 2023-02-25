@@ -76,7 +76,7 @@ const closeProductHover = ()=>{
     
     const handleDeleteProduct= (id)=>{
       console.log(id)
-          // dispatch(DeleteProductData(id))
+          dispatch(DeleteProductData(id))
     }
  
 
