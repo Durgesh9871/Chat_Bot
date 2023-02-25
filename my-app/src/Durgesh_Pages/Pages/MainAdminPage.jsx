@@ -9,6 +9,7 @@ import Chart from "react-apexcharts"
 const MainAdminPage = () => {
   let activeCount = 0 
 
+
   const dispatch = useDispatch() 
 
   const {customerData ,isLoadind,isError} = useSelector((state) => {
@@ -37,10 +38,10 @@ useEffect(()=>{
     <>
 
   {/*  Main Admin Page Started from here ---------- */}
-   <Box backgroundColor="#171923" border="2px   red" height="100vh">
+   <Box backgroundColor="#171923" border="2px   red" height="100%">
    <Sidebar />
      
-   <Box width={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "81%", '2xl': "81%" }} border="1px  red" height="auto" marginLeft="auto" pt="50px" >
+   <Box width={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "81%", '2xl': "81%" }} border="1px  red" height="auto" marginLeft="auto" p="50px 50px"  >
          {/* Cart- 100      
           users - [ududu ] */}
           {/* orderOverall - [ product-123 , id-jdbhdh  , price 2]  */}
@@ -55,6 +56,20 @@ useEffect(()=>{
      }}>
 
      </Chart>
+
+    {/*  SECond chart ------- */}
+     
+    <Chart type="bar" width="450px"  height="400px" options={{ 
+       xaxis:{
+              categories:["Active-user" , "Not-Active" ,"Not-Active" ,"Not-Active"]
+            }}}
+
+            series={[{
+                name: 'series-1',
+                data: []
+              }]}
+    >   </Chart>
+
 
    </Box>
 
