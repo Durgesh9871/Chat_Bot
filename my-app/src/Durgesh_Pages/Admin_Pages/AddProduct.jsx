@@ -1,5 +1,7 @@
 import { Box, Button, FormControl, FormLabel, Heading, Input } from '@chakra-ui/react'
 import React, { useReducer } from 'react'
+import { useDispatch } from 'react-redux'
+import { sendProductData } from '../../Redux/Laptop_reducer/action'
 import { Sidebar } from '../Admin_Components/SliderAdmin'
 
 
@@ -52,6 +54,9 @@ const reducer = (state , action)=>{
     case "BACKIMAGE":
           return {...state , backImage:action.payload}
 
+     case "RESET":
+        return initialState  
+
         default:
             return state 
      }
@@ -60,6 +65,8 @@ const reducer = (state , action)=>{
 
 const AddProduct = () => {
     const [state , dispatch] = useReducer(reducer , initialState)
+  
+    const dispatchData = useDispatch()
 
  const handleForm = (state)=>{
  let data = {
@@ -80,7 +87,8 @@ const AddProduct = () => {
 
 }
 
-
+dispatchData(sendProductData(data))
+dispatch({type:"RESET"})
 
   console.log(data)
  }
