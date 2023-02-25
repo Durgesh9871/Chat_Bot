@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 import {AiFillDelete, AiFillHeart} from "react-icons/ai" ;
 import {FiHeart} from "react-icons/fi"
 import { useDispatch, useSelector } from 'react-redux'
+import { DeleteProductData } from '../../Redux/Laptop_reducer/action'
 
 
 
@@ -72,7 +73,11 @@ const closeProductHover = ()=>{
 // here wishlist remove----------------------------------------
 
     const dispatch = useDispatch()
-   
+    
+    const handleDeleteProduct= (id)=>{
+      console.log(id)
+          // dispatch(DeleteProductData(id))
+    }
  
 
 
@@ -115,7 +120,7 @@ const closeProductHover = ()=>{
     <Box id='productDataDesc' position="absolute" bottom="20px" onMouseOut={closeProductHover} onMouseOver={handleProductHover}  style={{border:"2px   #EBECEE" ,height:"auto" , padding:"10px 10px 10px 10px" ,cursor:'pointer'  }}w={{base:"79vw", sm: "54vw", md: "31vw", lg: "22vw" ,xl: "22vw",'2xl': "22vw",}}>
           
           {/*  wishlist on hover---------------------------------------- */}
-    { effect && (<Box  style={{border:"2px solid #EBECEE" , width:"60%" , margin:"auto" , display:"flex" ,justifyContent:"center" , alignItems:"center" ,padding:"2px" , color:"#fff" }}>{wishlistColor ? <AiFillHeart color="red"  /> : <AiFillDelete /> } <Text ml={2}>Delete</Text> </Box> )}
+    { effect && (<Box onClick={()=>handleDeleteProduct(id)}  style={{border:"2px solid #EBECEE" , width:"60%" , margin:"auto" , display:"flex" ,justifyContent:"center" , alignItems:"center" ,padding:"2px" , color:"#fff" }}>{wishlistColor ? <AiFillHeart color="red"  /> : <AiFillDelete /> } <Text ml={2}>Delete</Text> </Box> )}
 
       {/*  reviws star on hover ----------------------------------------------- */}
      {effect && <Box style={{display:"flex" ,justifyContent:"space-between" }}>

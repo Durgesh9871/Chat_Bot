@@ -11,12 +11,14 @@ const Search = () => {
 	const [loading, setLoading] = useState(false);
 	const [post, setPost] = useState([]);
 	const [searchTitle, setSearchTitle] = useState('');
+    
+	
 
 	useEffect(() => {
 		const loadPosts = async () => {
 			setLoading(true);
 			const response = await axios.get(
-				'https://long-pear-giraffe-gown.cyclic.app/api/mens'
+				'http://localhost:8080/mens'
 			);
 			setPost(response.data);
 			setLoading(false);

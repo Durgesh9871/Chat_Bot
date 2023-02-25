@@ -5,11 +5,22 @@ import axios from "axios"
 
 const getDataProduct = (dispatch)=>{
         dispatch({type:GETPRODUCTLAPTOPDATA_REQUEST}) 
-        return axios.get(`https://long-pear-giraffe-gown.cyclic.app/api/mens`)
+        return axios.get(`http://localhost:8080/mens`)
         .then((res)=> dispatch({type:GETPRODUCTLAPTOPDATA_SUCCESS , payload:res.data})) 
         .catch(()=> dispatch({type:GETPRODUCTLAPTOPDATA_FAILURE}))
 }
 
 export {getDataProduct}
+
+
+
+const DeleteProductData =(id)=> (dispatch)=>{
+        dispatch({type:"GET_DELETE_REQUEST"}) 
+        return axios.delete(`http://localhost:8080/mens/${id}`)
+        .then((res)=> dispatch(getDataProduct)) 
+        .catch((err)=> console.log(err , "Error in Deleting the data") )
+}
+
+export {DeleteProductData}
 
 
