@@ -137,7 +137,7 @@ useEffect(()=>{
 
         
           <Chart type="pie" width="450px"  height="400px"  series={[10 , activeCount]  }  options ={{
-      title:{text:"Data"} ,
+      title:{text:"Total Cart Data"} ,
      
 
       noData:{text:"Empty"} ,
