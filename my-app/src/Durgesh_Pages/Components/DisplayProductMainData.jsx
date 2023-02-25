@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom'
 import {AiFillHeart} from "react-icons/ai" ;
 import {FiHeart} from "react-icons/fi"
 import { useDispatch, useSelector } from 'react-redux'
-import { sendWishListData ,deleteWishListData } from '../../Redux/Wishlist_reducer/action' 
 
 
 
@@ -73,44 +72,8 @@ const closeProductHover = ()=>{
 // here wishlist remove----------------------------------------
 
     const dispatch = useDispatch()
-    const toast = useToast()
-  //  Code for sending wishlist Data ---------------
-  const handle = (uniqueId)=>{
-    setWishlistColor(!wishlistColor)
-    if(wishlistColor == false){
-      const payload = {
-        ID:uniqueId ,
-        mainImage : mainImage ,
-        categories:model ,
-        title:name ,
-        price:price ,
-        realPrice:realPrice , 
-      }
-    
-        dispatch(sendWishListData(payload))
-        toast({
-          title: 'Product Added to Wishlist',
-          status: 'success',
-          position: 'top',
-          duration: 3000,
-          isClosable: true,
-        })
-     }
-    //  else{
-    //   dispatch(deleteWishListData(uniqueId))
-    //   toast({
-    //     title: 'Product Removed from Wishlist',
-    //     status: 'error',
-    //     position: 'top',
-    //     duration: 3000,
-    //     isClosable: true,
-    //   })
-    //  }
-    
-  }
-
-
-
+   
+ 
 
 
 
@@ -152,7 +115,7 @@ const closeProductHover = ()=>{
     <Box id='productDataDesc' position="absolute" bottom="20px" onMouseOut={closeProductHover} onMouseOver={handleProductHover}  style={{border:"2px   #EBECEE" ,height:"auto" , padding:"10px 10px 10px 10px" ,cursor:'pointer'  }}w={{base:"79vw", sm: "54vw", md: "31vw", lg: "22vw" ,xl: "22vw",'2xl': "22vw",}}>
           
           {/*  wishlist on hover---------------------------------------- */}
-    { effect && (<Box onClick={()=>handle(uniqueId)} style={{border:"2px solid #EBECEE" , width:"60%" , margin:"auto" , display:"flex" ,justifyContent:"center" , alignItems:"center" ,padding:"2px" }}>{wishlistColor ? <AiFillHeart color="red"  /> : <FiHeart color="red" /> } <Text ml={2}>WISHLIST</Text> </Box> )}
+    { effect && (<Box  style={{border:"2px solid #EBECEE" , width:"60%" , margin:"auto" , display:"flex" ,justifyContent:"center" , alignItems:"center" ,padding:"2px" }}>{wishlistColor ? <AiFillHeart color="red"  /> : <FiHeart color="red" /> } <Text ml={2}>WISHLIST</Text> </Box> )}
 
       {/*  reviws star on hover ----------------------------------------------- */}
      {effect && <Box style={{display:"flex" ,justifyContent:"space-between" }}>
