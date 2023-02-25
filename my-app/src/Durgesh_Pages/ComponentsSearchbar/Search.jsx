@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './SearchBar.css';
 import { Box, Input, SimpleGrid } from '@chakra-ui/react';
-import { DisplayProductMainData } from '../../DurgeshFolder/Components/DisplayProductMainData';
+import { DisplayProductMainData } from '../Components/DisplayProductMainData';
 import { SearchIcon } from '@chakra-ui/icons';
 import { LoadingIndicator } from './LoadingIndicator';
 
@@ -55,7 +55,7 @@ const Search = () => {
 				style={{ border: '1px  green', height: 'auto', width: '100%' }}
 			>
 				<SimpleGrid
-					columns={{ base: 1, sm: 1, md: 2, lg: 3, xl: 4, '2xl': 4 }}
+					columns={{ base: 1, sm: 1, md: 2, lg: 3, xl: 3, '2xl': 3 }}
 					spacingY={10}
 				>
 					{!loading &&
