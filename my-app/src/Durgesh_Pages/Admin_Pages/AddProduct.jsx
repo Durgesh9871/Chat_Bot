@@ -5,7 +5,7 @@ import { Sidebar } from '../Admin_Components/SliderAdmin'
 
 const initialState = {
  rating:0 , 
- categories:[] ,
+ categories:"" ,
  title:"" ,
  price: 200 , 
  realPrice: 400 , 
@@ -64,7 +64,8 @@ const AddProduct = () => {
 
 
 
-
+  console.log(state)
+  
   return (
     <Box>
         <Sidebar />
