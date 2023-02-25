@@ -15,15 +15,15 @@ const DeletePage = () => {
   return (
     <Box>
        <Sidebar />
-       <Box background="#171923" height="auto">
+       <Box background="#171923" height="100%">
 
        {/*  Delete Page Started from here ---------------------- */}
        <Box width="81%" border="1px red" height="auto" marginLeft="auto" >
             
 
-       <Box >
+       {/* <Box > */}
              <Search />
-      </Box>
+      {/* </Box> */}
         
 
        </Box>

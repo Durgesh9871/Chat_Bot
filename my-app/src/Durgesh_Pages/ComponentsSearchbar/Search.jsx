@@ -24,10 +24,11 @@ const Search = () => {
 		loadPosts();
 	}, []);
 
+	
 	return (
 		<Box className="container">
 			<Box className="input">
-				<SearchIcon fontSize="20px" position="relative" left="30px" />
+				<SearchIcon fontSize="20px" position="relative" left="30px" color="#fff"  />
 				<Input
 					shadow="sm"
 					pl={9}
@@ -41,6 +42,7 @@ const Search = () => {
 						xl: '50%',
 						'2xl': '50%',
 					}}
+					color="#fff"
 					placeholder="Search the Products"
 					onChange={(e) => setSearchTitle(e.target.value)}
 					height="53px"
