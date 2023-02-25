@@ -41,7 +41,7 @@ useEffect(()=>{
    <Box backgroundColor="#171923" border="2px   red" height="100%">
    <Sidebar />
      
-   <Box width={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "81%", '2xl': "81%" }} border="1px  red" height="auto" marginLeft="auto" p="50px 50px"  >
+   <Box width={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "81%", '2xl': "81%" }} border="1px  red" height="auto" marginLeft="auto" p="50px 50px" display="flex"  >
          {/* Cart- 100      
           users - [ududu ] */}
           {/* orderOverall - [ product-123 , id-jdbhdh  , price 2]  */}
@@ -61,13 +61,19 @@ useEffect(()=>{
      
     <Chart type="bar" width="450px"  height="400px" options={{ 
        xaxis:{
-              categories:["Active-user" , "Not-Active" ,"Not-Active" ,"Not-Active"]
+              categories:["Active-user" , "Not-Active" ]
             }}}
 
             series={[{
                 name: 'series-1',
-                data: []
-              }]}
+                data: [ customerData.length-activeCount ],
+            },{
+                name: 'series-2',
+                data: [activeCount ,]
+            }
+          ]}
+
+              
     >   </Chart>
 
 
