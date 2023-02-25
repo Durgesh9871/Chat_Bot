@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Box } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import {Sidebar} from "../Admin_Components/SliderAdmin"
@@ -7,8 +7,7 @@ import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 import Chart from "react-apexcharts"
 
 const MainAdminPage = () => {
-  const [active , setActive] = useState([])
-  const [out , setOut] = useState([])
+  let activeCount = 0 
 
   const dispatch = useDispatch() 
 
@@ -20,6 +19,13 @@ const MainAdminPage = () => {
     }
 },shallowEqual )   
  
+if(customerData.length > 0 ){
+  for(var i=0 ; i<customerData.length ; i++){
+        if(customerData[i].active == "true"){
+          activeCount++
+        }
+  }
+}
 
 
 
@@ -34,17 +40,18 @@ useEffect(()=>{
    <Box backgroundColor="#171923" border="2px   red" height="100vh">
    <Sidebar />
      
-   <Box width={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "81%", '2xl': "81%" }} border="1px red" height="auto" marginLeft="auto" color="#fff" >
+   <Box width={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "81%", '2xl': "81%" }} border="1px  red" height="auto" marginLeft="auto" pt="50px" >
          {/* Cart- 100      
           users - [ududu ] */}
           {/* orderOverall - [ product-123 , id-jdbhdh  , price 2]  */}
       
-     <Chart type="pie" width="450px"  height="400px" series={[12 , 20]}  options ={{
+     <Chart type="pie" width="450px"  height="400px"  series={[customerData.length-activeCount , activeCount]}  options ={{
       title:{text:"Active User Data"} ,
+    
 
       noData:{text:"Empty"} ,
 
-      labels:["Active User" , "Not Active User"]
+      labels:["Not Active User" , "Active User"]
      }}>
 
      </Chart>
