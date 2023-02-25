@@ -32,15 +32,15 @@ const userImage ={
        <Sidebar />
        
        {/*  Customer Page Started from here --------- */}
-       <Box background="#171923" height="100vh">
+       <Box background="#171923" height="100%">
 
         {/*  Main box of customer  */}
-         <Box width="81%" border="1px red" height="auto" marginLeft="auto" >
+         <Box width={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "81%", '2xl': "81%" }} border="1px  red" height="auto" marginLeft="auto"  p="2%" >
          <Heading color="#fff" fontWeight="500">Customers</Heading>
              
              {/*  TABLE IS STARTED FROM HERE -------------------------- */}
-             <TableContainer color="#fff">
-  <Table variant='simple'>
+             <TableContainer color="#fff" >
+  <Table variant='simple'  >
     <TableCaption  placement="top">Users Data </TableCaption>
     <Thead>
       <Tr>

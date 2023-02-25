@@ -18,14 +18,14 @@ const Sidebar = () => {
 
   return (
     <>
-       <Box background="#171923" height="10vh"  borderBottom="1px solid white" display="flex" justifyContent="space-between" alignItems="center" padding="0px 100px" >
+       <Box background="#171923" height="10vh"  borderBottom="1px solid white" display="flex" justifyContent="space-between" alignItems="center" padding="0px 6%" >
       
-       <Box display="none">
+       <Box display={{ base: "block", sm: "block", md: "block", lg: "block" , xl:  "none" , '2xl': "none" }}>
         <Menu  >
   {({ isOpen }) => (
     <> 
     <Box display="flex" alignItems="center">
-      <MenuButton   color="#fff" mr="2px" ml="10px" fontSize="20px"> DashBoard  </MenuButton>
+      <MenuButton   color="#fff" mr="2px"  fontSize="20px"> DashBoard  </MenuButton>
       <AiOutlineCaretDown  color="#fff" fontSize="10px" style={{marginTop:"10px"}} />
       </Box>
       <MenuList background="#171923" border="1px solid #fff" padding="10px">
@@ -65,7 +65,9 @@ const Sidebar = () => {
 </Menu>
 
        </Box>
-       <Box display="none" >
+       {/*  Side Bar is here ------------- */}
+
+       <Box display={{ base: "none", sm: "none", md: "none", lg: "none" , xl:  "block" , '2xl': "block" }} >
       <SidebarNav isOpen={true} >
         <SidebarWrap>
           <NavIcon >

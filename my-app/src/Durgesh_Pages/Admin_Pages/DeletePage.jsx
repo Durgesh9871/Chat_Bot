@@ -18,7 +18,7 @@ const DeletePage = () => {
        <Box background="#171923" height="100%">
 
        {/*  Delete Page Started from here ---------------------- */}
-       <Box width="81%" border="1px red" height="auto" marginLeft="auto" >
+       <Box width={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "81%", '2xl': "81%" }} border="1px  red" height="auto" marginLeft="auto" >
             
 
        {/* <Box > */}
