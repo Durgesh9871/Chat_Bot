@@ -36,7 +36,9 @@ useEffect(()=>{
       
      <Chart type="pie" width="450px" height="400px" series={[32,56,54,44 ,70]} options ={{
       title:{text:"Active User Data"},
+
       noData:{text:"Empty"} ,
+      
       labels:['mayh' ,'june' ,"july" ,'aut' ,"sep"]
      }}>
 
