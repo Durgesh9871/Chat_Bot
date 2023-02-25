@@ -83,7 +83,7 @@ useEffect(()=>{
 
      {/*  ORDER DETAILS ------------------------------- */}
      <Box width={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "81%", '2xl': "81%" }} border="1px  red" height="auto" marginLeft="auto" p="50px 0px" >
-       <Text color="#fff" textAlign="center" fontSize="25px" mb="25px">Order Details</Text>
+       <Text color="#fff" textAlign="center" fontSize="25px" mb="55px">Order Details</Text>
        
        {/*  Chart start from here ----order ----  BAR GRAPH ---------------*/}
          <Box display="flex" justifyContent="space-evenly">
@@ -110,13 +110,13 @@ useEffect(()=>{
 
 
           {/*  Second */}
-          <Chart type="pie" width="450px"  height="400px"  series={[customerData.length-activeCount , activeCount]  }  options ={{
+          <Chart type="pie" width="450px"  height="400px"  series={[10 , activeCount]  }  options ={{
       title:{text:"Data"} ,
      
 
       noData:{text:"Empty"} ,
 
-      labels:["Not Active User" , "Active User"]
+      labels:["Total Orders" , "Active User"]
      }}>
 
      </Chart>
