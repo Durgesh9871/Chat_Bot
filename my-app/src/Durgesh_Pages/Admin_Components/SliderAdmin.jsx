@@ -18,14 +18,42 @@ const Sidebar = () => {
 
   return (
     <>
-       <Box background="#171923" height="10vh"  borderBottom="1px solid white" display="flex" justifyContent="flex-end" alignItems="center" padding="0px 100px" >
-        <Menu >
+       <Box background="#171923" height="10vh"  borderBottom="1px solid white" display="flex" justifyContent="space-between" alignItems="center" padding="0px 100px" >
+      
+       <Box display="none">
+        <Menu  >
+  {({ isOpen }) => (
+    <> 
+    <Box display="flex" alignItems="center">
+      <MenuButton   color="#fff" mr="2px" ml="10px" fontSize="20px"> DashBoard  </MenuButton>
+      <AiOutlineCaretDown  color="#fff" fontSize="10px" style={{marginTop:"10px"}} />
+      </Box>
+      <MenuList background="#171923" border="1px solid #fff" padding="10px">
+      <Link to="/adminPage">  <MenuItem background="#171923"  color="#fff">Dashboard</MenuItem></Link>
+      <Link to="/customerPageAdmin">  <MenuItem background="#171923"  color="#fff">  <FaUserAlt style={{marginRight:"6px"}}  /> Customer</MenuItem> </Link>
+      <Link to="/deltePageAdmin">  <MenuItem background="#171923"  color="#fff">  <AiFillDelete style={{marginRight:"6px"}}  /> Delete Products</MenuItem> </Link>
+
+      
+      </MenuList> 
+      
+    </>
+  )}
+</Menu>
+</Box>  
+
+{/*  This Box for empty space ------------ */}
+<Box></Box>
+
+
+{/* --------------------------------------- */}
+{/*  Second option  */}
+<Menu >
   {({ isOpen }) => (
     <> 
     <Box display="flex" alignItems="center">
       <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX7hUxA0hBjTCU1gDqz8RoPeOScEcwN-oq0idlRExLh-TXNIrDs7YPQzlticXdn-b02ExMDKkXGik&usqp=CAU&ec=48600112" width="35px" borderRadius="100%" border="2px solid white" />
       <MenuButton   color="#fff" mr="2px" ml="10px" fontSize="20px">   Durgesh  </MenuButton>
-      <AiOutlineCaretDown  color="#fff" fontSize="10px" style={{marginTop:"10px"}} />
+      {/* <AiOutlineCaretDown  color="#fff" fontSize="10px" style={{marginTop:"10px"}} /> */}
       </Box>
       {/* <MenuList background="#171923" border="1px solid #fff" padding="10px">
         <MenuItem background="#171923"  color="#fff">Download</MenuItem>
@@ -35,8 +63,10 @@ const Sidebar = () => {
     </>
   )}
 </Menu>
+
        </Box>
-      <SidebarNav isOpen={true}>
+       <Box display="none" >
+      <SidebarNav isOpen={true} >
         <SidebarWrap>
           <NavIcon >
            <Link to="/adminPage">  <Text>Dashboard</Text> </Link>
@@ -52,6 +82,7 @@ const Sidebar = () => {
 
         </SidebarWrap>
       </SidebarNav>
+      </Box>
     </>
   );
 };

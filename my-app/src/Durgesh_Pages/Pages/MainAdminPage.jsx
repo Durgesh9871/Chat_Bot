@@ -12,7 +12,10 @@ const MainAdminPage = () => {
    <Sidebar />
      
    <Box width="81%" border="1px red" height="auto" marginLeft="auto" color="#fff" >
-    jsj
+         {/* Cart- 100      
+          users - [ududu ] */}
+          {/* orderOverall - [ product-123 , id-jdbhdh  , price 2]  */}
+
    </Box>
 
    </Box>
